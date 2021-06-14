@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="build/img/wallet-solid.ico" type="image/x-icon">
+    <link rel="stylesheet" href="build/css/bootstrap.min.css">
+    <link rel="stylesheet" href="build/css/styles.css">
+    <title>Project</title>
+</head>
+<body class="bg-dark">
+    <div class="vh-100 container d-flex flex-column justify-content-between">
+        <header class="flex-grow-0">
+            <h1 class="text-center text-white m-0 py-4">Weekly Expense</h1>
+        </header><!--header-->
+        <main class="main-content flex-grow-1">
+            <div class="row">
+                <div class="col">
+                    <div class="content primary">
+                        <h2 class="text-center">Add your expenses here</h2>
+                        <form action="#" id="add-expense">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Expense: </label>
+                                <input type="text" class="form-control fs-4" id="name" name="name" placeholder="Expense Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="amount" class="from-label">Amount: </label>
+                                <input type="number" name="amount" id="amount" class="form-control fs-4" placeholder="Amount in Gs">
+                            </div>
+                            <input type="submit" value="Add" class="btn btn-primary fs-4">
+                        </form><!--add-expense-->
+                    </div><!--content-->
+                </div>
+
+                <div class="col">
+                    <div class="content secondary">
+                        <h2 class="text-center">List of the Expenses</h2>
+                        <div id="expenses">
+                            <ul class="list-group"></ul>
+                        </div>
+                        <div id="budget" class="budget mt-3">
+                            <div class="alert alert-primary">
+                                <p>Badget: Gs <span id="total"></span></p>
+                            </div>
+                            <div class="remaining alert alert-success">
+                                <p>Remaining: Gs <span id="remaining"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main><!--main-content-->
+        <footer class="flex-grow-0">
+            <p class="fs-4 text-center text-white m-0 py-4"><span id="year" class="me-1"></span>&copy; All rights reserved. Developed by Jonas Martinez</p>
+        </footer>
+    </div>
+
+    <script src="build/js/bundle.min.js"></script>
+</body>
+</html>
